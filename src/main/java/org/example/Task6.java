@@ -1,17 +1,16 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Calculate {
+public class Task6 {
 
     static class Result {
-        double sn;    // сумма n слагаемых
-        double se;    // сумма |a_k| > e
-        double se10;  // сумма |a_k| > e/10
-        double f;     // точное значение функции
+        double sn;
+        double se;
+        double se10;
+        double f;
         int n, ne, ne10;
     }
 
-    // рекуррентная формула: a_k через a_(k-1)
     public static double nextTerm(double prev, double x, int k) {
         return prev * (-(k + 2.0) / k * x);
     }
